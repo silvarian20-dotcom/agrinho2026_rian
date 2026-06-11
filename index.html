@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agrinho 2026 | Rian - Escola General Carneiro</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+    <!-- AOS Animações -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    
+    <style>
+        :root {
+            --gov-green: #006a33;
+            --gov-blue: #003366;
+            --gov-yellow: #ffcc00;
+            --light-bg: #f8fafc;
+            --white: #ffffff;
+            --text-dark: #1e293b;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background-color: var(--light-bg);
+            color: var(--text-dark);
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 800;
+        }
+
+        /* Header / Navbar */
+        nav {
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(10px);
+            padding: 15px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 3px solid var(--gov-green);
+        }
+
+        .logo-area {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo-dot {
+            width: 12px;
+            height: 12px;
+            background: var(--gov-green);
+            border-radius: 50%;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--gov-blue);
+            font-weight: 600;
+            margin-left: 25px;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--gov-green);
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 160px 8% 100px;
+            background: linear-gradient(rgba(255,255,255,0.8), rgba(255,255,255,0.8)), 
+                        url('https://www.sistemafaep.org.br/wp-content/uploads/2023/04/agrinho-capa.jpg'); /* Imagem de fundo opcional */
+            background-size: cover;
+            background-position: center;
+            text-align: center;
+        }
+
+        .hero span {
+            color: var(--gov-green);
+            font-weight: 600;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            color: var(--gov-blue);
+            margin: 20px 0;
+            line-height: 1.1;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            max-width: 700px;
+            margin: 0 auto 30px;
+            color: #555;
+        }
+
+        .btn-main {
+            background: var(--gov-green);
+            color: white;
+            padding: 15px 35px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-block;
+            transition: 0.3s;
+            box-shadow: 0 4px 15px rgba(0,106,51,0.3);
+        }
+
+        .btn-main:hover {
+            transform: translateY(-3px);
+            background: var(--gov-blue);
+        }
+
+        /* Grid de Conteúdo do Curso */
+        .course-section {
+            padding: 80px 8%;
+        }
+
+        .section-header {
+            margin-bottom: 50px;
+            border-left: 6px solid var(--gov-yellow);
+            padding-left: 20px;
+        }
+
+        .course-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        .module-card {
+            background: var(--white);
+            padding: 30px;
+            border-radius: 12px;
+            border: 1px solid #e2e8f0;
+            transition: 0.4s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .module-card:hover {
+            border-color: var(--gov-green);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+        }
+
+        .module-card h3 {
+            color: var(--gov-blue);
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+        }
+
+        .module-number {
+            font-size: 3rem;
+            font-weight: 800;
+            color: rgba(0, 106, 51, 0.05);
+            position: absolute;
+            top: 10px;
+            right: 20px;
+        }
+
+        /* Info Escola */
+        .school-info {
+            background: var(--gov-blue);
+            color: var(--white);
+            padding: 60px 8%;
+            margin: 50px 0;
+            border-radius: 0 50px 0 50px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+
+        .school-text h2 { margin-bottom: 10px; }
+
+        /* Footer */
+        footer {
+            background: #f1f5f9;
+            padding: 40px 8%;
+            text-align: center;
+            border-top: 1px solid #ddd;
+        }
+
+        /* Mobile */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.2rem; }
+            .nav-links { display: none; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo-area">
+            <div class="logo-dot"></div>
+            <span style="font-weight: 800; color: var(--gov-blue);">AGRINHO <span style="color: var(--gov-green);">2026</span></span>
+        </div>
+        <div class="nav-links">
+            <a href="#curso">O Curso</a>
+            <a href="#escola">Minha Escola</a>
+            <a href="#rian">Sobre o Aluno</a>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div data-aos="fade-down">
+            <span>Inovação & Sustentabilidade</span>
+            <h1>Educação que transforma <br> o campo e a cidade.</h1>
+            <p>Seja bem-vindo ao portal de estudos do Rian para o Agrinho 2026. Foco no desenvolvimento tecnológico e sustentável da nossa região.</p>
+            <a href="#curso" class="btn-main">Explorar Módulos</a>
+        </div>
+    </header>
+
+    <section class="course-section" id="curso">
+        <div class="section-header" data-aos="fade-right">
+            <span>CONTEÚDO PROGRAMÁTICO</span>
+            <h2>O que estamos aprendendo</h2>
+        </div>
+
+        <div class="course-grid">
+            <div class="module-card" data-aos="fade-up" data-aos-delay="100">
+                <div class="module-number">01</div>
+                <h3>Sustentabilidade 4.0</h3>
+                <p>Uso de tecnologias digitais para preservação do meio ambiente e otimização de recursos naturais.</p>
+            </div>
+
+            <div class="module-card" data-aos="fade-up" data-aos-delay="200">
+                <div class="module-number">02</div>
+                <h3>Robótica no Campo</h3>
+                <p>Como a automação está ajudando pequenos e grandes produtores a serem mais eficientes.</p>
+            </div>
+
+            <div class="module-card" data-aos="fade-up" data-aos-delay="300">
+                <div class="module-number">03</div>
+                <h3>Cidadania Digital</h3>
+                <p>O papel do jovem líder na construção de uma comunidade mais conectada e ética em 2026.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="school-info" id="escola" data-aos="zoom-in">
+        <div class="school-text">
+            <span>ORGULHO DE SER</span>
+            <h2>Escola Estadual General Carneiro</h2>
+            <p>Unindo forças entre educação de base e o programa Agrinho para formar cidadãos críticos.</p>
+        </div>
+        <div class="school-badge">
+            <div style="background: var(--gov-yellow); color: var(--gov-blue); padding: 15px 25px; border-radius: 5px; font-weight: bold;">
+                ALUNO: RIAN | 15 ANOS
+            </div>
+        </div>
+    </section>
+
+    <footer id="rian">
+        <p><strong>Rian - Desenvolvedor & Estudante</strong></p>
+        <p style="font-size: 0.8rem; color: #666; margin-top: 10px;">Projeto desenvolvido para o concurso Agrinho 2026. <br> General Carneiro - Paraná.</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        // Inicializa animações ao rolar a página
+        AOS.init({
+            duration: 800,
+            offset: 120,
+            once: true
+        });
+
+        // Scroll Suave
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
