@@ -1,4 +1,4 @@
-[README (1).md](https://github.com/user-attachments/files/28899333/README.1.md)
+
 # 🚜 Fazenda Sustentável 2050
 
 > **Projeto desenvolvido para o Programa Agrinho 2026** > **Categoria:** Programação
